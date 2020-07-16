@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Presentacion.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>PruebaVehiculos</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <img class="header img" src="https://www.designevo.com/res/templates/thumb_small/water-spray-and-car.png" alt="Logo"> 
+    </header>
+    <nav class="header nav">
+        <ul class="nav__List">
+            <li class="nav__item"><a class="nav__link" href="Vehiculos.aspx">Vehiculos</a></li>
+            <li class="nav__item"><a class="nav__link" href="Servicios.aspx">Servicios</a></li>
+            <li class="nav__item"><a class="nav__link" href="ServicioVehiculo.aspx">Solicitar Servicio</a></l>
+            <li class="nav__item"><a class="nav__link" href="Reporte.aspx">Reporte de Servicios</a></li>
+        </ul>
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer>
+        <p class="footer__text">© 2020 Alejandro Morales Jiménez, All rights reserved.</p>
+    </footer>
+</body>
+</html>

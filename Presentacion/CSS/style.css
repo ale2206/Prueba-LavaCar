@@ -1,0 +1,92 @@
+﻿*{
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.img{
+    margin-left: 800px;
+    width: 350px;
+    height: auto;
+    padding: 5px;
+}
+
+.nav{
+    margin: 5px;
+}
+
+.nav__list{
+    list-style: none;
+    margin-bottom: 100px;
+}
+
+.nav__item {
+    list-style: none;
+    margin-bottom: 25px;
+    margin-left: 950px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    padding: 5px;
+    background: gray;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+footer{
+    margin-top: 180px;
+    height: 200px;
+    background: gray;
+}
+
+.footer__text{
+    font-weight: bold;
+    margin-left: 800px;
+}
+
+.articleVehiculo{
+    margin-top: 40px;
+    width: 880px;
+    padding: 10px;
+    margin-left: 630px;
+    border: 2px groove;
+}
+
+.articleServicio {
+    margin-top: 40px;
+    width: 680px;
+    padding: 10px;
+    margin-left: 700px;
+    border: 2px groove;
+}
+
+.articleServicioVehiculo {
+    margin-top: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 800px;
+    border: 2px groove;
+}
+
+.articleReporte {
+    margin-top: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 800px;
+    border: 2px groove;
+}
+
+.articleGridView {
+    margin-top: 40px;
+    width: 500px;
+    padding: 10px;
+    margin-left: 800px;
+    border: 2px groove;
+}
