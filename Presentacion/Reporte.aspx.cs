@@ -29,11 +29,18 @@ namespace Presentacion
 
         protected void DDLServicios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DDLServicios.SelectedIndex != 0)
+            if (DDLServicios.SelectedValue.Equals("Seleccione un valor"))
             {
-                FillGVServicios(DDLServicios.SelectedValue);
-                FillGVVehiculoServicios(DDLServicios.SelectedValue);
+                Limpiar();
             }
+            else
+            {
+                if (DDLServicios.SelectedIndex != 0)
+                {
+                    FillGVServicios(DDLServicios.SelectedValue);
+                    FillGVVehiculoServicios(DDLServicios.SelectedValue);
+                }
+            }       
         }
 
         private void FillGVVehiculoServicios(string selectedValue)
@@ -46,6 +53,15 @@ namespace Presentacion
         {
             GVServicios.DataSource = LNServicioVehiculo.GetServicios(selectedValue);
             GVServicios.DataBind();
+        }
+
+        protected void Limpiar()
+        {
+            GVServicios.DataSource = null;
+            GVServicios.DataBind();
+
+            GVVehiculosServicios.DataSource = null;
+            GVVehiculosServicios.DataBind();
         }
     }
 }
