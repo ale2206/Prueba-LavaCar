@@ -40,6 +40,22 @@ namespace AccesoDatos
             }
         }
 
+        public static List<Vehiculo_Servicio> GetVehiculosServicios(string servicioID)
+        {
+            ModeloEntidad db = new ModeloEntidad();
+            List<Vehiculo_Servicio> vehiculo_Servicios = null;
+
+            try
+            {
+                vehiculo_Servicios = db.Vehiculo_Servicio.Where(c => c.ID_Servicio.ToString() == servicioID).ToList();
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+            return vehiculo_Servicios;
+        }
+
         public static List<Vehiculo> GetServicios(string servicioID)
         {
             ModeloEntidad db = new ModeloEntidad();
@@ -47,9 +63,10 @@ namespace AccesoDatos
             try
             {
                 Vehiculo_Servicio vehiculo_Servicios = null;
-                vehiculo_Servicios = db.Vehiculo_Servicio.Where(c => c.ID_Servicio.ToString() == servicioID).FirstOrDefault();
+                vehiculo_Servicios = db.Vehiculo_Servicio.Where(c => c.ID_Servicio.ToString() == servicioID).First();
 
                 vehiculos = db.Vehiculo.Where(c => c.ID_Vehiculo == vehiculo_Servicios.ID_Vehiculo).ToList();
+
             }
             catch (Exception exception)
             {

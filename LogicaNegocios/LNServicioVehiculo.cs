@@ -24,5 +24,10 @@ namespace LogicaNegocios
         {
             ADServicioVehiculo.IngresarVehiculoServicio(dataVehiculo_Servicio);
         }
+
+        public static List<Vehiculo_Servicio> GetVehiculosServicios(string servicioID)
+        {
+            return ADServicioVehiculo.GetVehiculosServicios(servicioID);
+        }
     }
 }

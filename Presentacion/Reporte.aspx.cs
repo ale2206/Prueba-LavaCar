@@ -32,7 +32,14 @@ namespace Presentacion
             if (DDLServicios.SelectedIndex != 0)
             {
                 FillGVServicios(DDLServicios.SelectedValue);
+                FillGVVehiculoServicios(DDLServicios.SelectedValue);
             }
+        }
+
+        private void FillGVVehiculoServicios(string selectedValue)
+        {
+            GVVehiculosServicios.DataSource = LNServicioVehiculo.GetVehiculosServicios(selectedValue);
+            GVVehiculosServicios.DataBind();
         }
 
         private void FillGVServicios(string selectedValue)

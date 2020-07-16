@@ -19,5 +19,14 @@
        </asp:GridView>
     </article>
 
+    <article class="articleGridView">
+        <asp:GridView ID="GVVehiculosServicios" runat="server" AutoGenerateColumns="False" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" BackColor="#CCCCCC" BorderColor="#999999" DataKeyNames="ID_Vehiculo_Servicio" >
+            <Columns>
+                <asp:BoundField DataField="ID_Servicio" HeaderText="ID Servicio"></asp:BoundField>
+                <asp:BoundField DataField="ID_Vehiculo" HeaderText="ID Vehiculo"></asp:BoundField>
+            </Columns>
+       </asp:GridView>
+    </article>
+
 
 </asp:Content>
